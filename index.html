@@ -7,7 +7,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght=500;600;700&family=JetBrains+Mono:wght=400;500&family=Inter:wght=400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -633,8 +633,8 @@ footer{
     <h2>Contact</h2>
 
     <div class="stack">
-        <p class="contact-line">Email: <a href="mailto:s-zhangh@bsd405.org">your.email@example.com</a></p>
-        <p class="contact-line">GitHub: <a href="https://github.com/albertzhang33" target="_blank">github.com/yourusername</a></p>
+        <p class="contact-line">Email: <a href="mailto:s-zhangh@bsd405.org">s-zhangh@bsd405.org</a></p>
+        <p class="contact-line">GitHub: <a href="https://github.com/albertzhang33" target="_blank">github.com/albertzhang33</a></p>
     </div>
 </section>
 
@@ -642,14 +642,12 @@ footer{
     © 2026 Albert Zhang — Network Engineering Portfolio
 </footer>
 
-</div><!-- /page-wrap -->
-
-<script>
+</div><script>
 (function(){
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
 
-    /* ---- custom cursor: a ring that eases toward the pointer ---- */
+    /* ---- custom cursor: fixed the center-translate bug ---- */
     var ring = document.querySelector('.cursor-ring');
     if(isTouch){
         ring.style.display = 'none';
@@ -667,7 +665,8 @@ footer{
             var ease = reduceMotion ? 1 : 0.18;
             ringX += (mouseX - ringX) * ease;
             ringY += (mouseY - ringY) * ease;
-            ring.style.transform = 'translate(' + ringX + 'px,' + ringY + 'px) translate(-50%,-50%)';
+            // Combined the pixel translation with the absolute centering matrix rule
+            ring.style.transform = 'translate3d(' + ringX + 'px,' + ringY + 'px, 0) translate(-50%,-50%)';
             requestAnimationFrame(animateRing);
         }
         animateRing();
@@ -678,7 +677,7 @@ footer{
         });
     }
 
-    /* ---- motion blur while scrolling, sharpens once it settles ---- */
+    /* ---- motion blur while scrolling ---- */
     if(!reduceMotion){
         var wrap = document.getElementById('page-wrap');
         var lastY = window.scrollY;
