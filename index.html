@@ -695,7 +695,7 @@ footer{
             var delta = Math.abs(currentY - lastY);
             lastY = currentY;
 
-            var blurAmount = Math.min(delta * 0.5, 7);
+            var blurAmount = Math.min(delta * 0.2, 5);
             wrap.style.filter = 'blur(' + blurAmount + 'px)';
 
             clearTimeout(blurTimeout);
