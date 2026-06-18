@@ -1,1 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Allbert Zhang | Network Engineer Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d1117;
+    color:#e6edf3;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#161b22;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #30363d;
+    z-index:1000;
+}
+
+.logo{
+    color:#58a6ff;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+nav a{
+    color:#e6edf3;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#58a6ff;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero span{
+    color:#58a6ff;
+}
+
+.hero p{
+    max-width:800px;
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.btn{
+    margin-top:30px;
+    display:inline-block;
+    background:#58a6ff;
+    color:black;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+h2{
+    color:#58a6ff;
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+.about p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#21262d;
+    padding:10px 15px;
+    border-radius:8px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#161b22;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #30363d;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#58a6ff;
+}
+
+.card h3{
+    color:#58a6ff;
+    margin-bottom:10px;
+}
+
+.documents ul{
+    list-style:none;
+}
+
+.documents li{
+    margin-bottom:15px;
+}
+
+.documents a{
+    color:#58a6ff;
+    text-decoration:none;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    color:#58a6ff;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #30363d;
+    color:#8b949e;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AZ</div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#documents">Documents</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Allbert <span>Zhang</span></h1>
+
+    <p>
+        Network Engineering enthusiast focused on enterprise routing,
+        scalable infrastructure, and advanced networking technologies
+        including OSPF, EIGRP, and BGP.
+    </p>
+
+    <a href="#projects" class="btn">View My Projects</a>
+</section>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am passionate about network design, routing optimization,
+        troubleshooting, and infrastructure engineering. My work focuses
+        on building reliable and scalable networks using industry-standard
+        routing protocols and enterprise technologies.
+    </p>
+
+    <div class="skills">
+        <div class="skill">OSPF</div>
+        <div class="skill">EIGRP</div>
+        <div class="skill">BGP</div>
+        <div class="skill">Cisco IOS</div>
+        <div class="skill">VLANs</div>
+        <div class="skill">STP</div>
+        <div class="skill">Network Security</div>
+        <div class="skill">GNS3</div>
+        <div class="skill">EVE-NG</div>
+        <div class="skill">Wireshark</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>Multi-Area OSPF Lab</h3>
+            <p>
+                Designed and implemented a multi-area OSPF topology with
+                Area 0 backbone routing, route summarization, and failover testing.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>EIGRP Enterprise Network</h3>
+            <p>
+                Configured EIGRP with route summarization, unequal-cost
+                load balancing, and redundancy validation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>BGP ISP Simulation</h3>
+            <p>
+                Built a multi-AS BGP environment demonstrating peering,
+                route filtering, path selection, and policy control.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="documents" class="documents">
+    <h2>Documents</h2>
+
+    <ul>
+        <li><a href="docs/Resume.pdf" target="_blank">Resume</a></li>
+        <li><a href="docs/OSPF-Lab.pdf" target="_blank">OSPF Lab Report</a></li>
+        <li><a href="docs/EIGRP-Lab.pdf" target="_blank">EIGRP Lab Report</a></li>
+        <li><a href="docs/BGP-Project.pdf" target="_blank">BGP Design Project</a></li>
+    </ul>
+
+    <p>
+        Upload your PDF files into a folder named <strong>docs</strong>.
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+
+    <p>Email: your.email@example.com</p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/yourusername" target="_blank">
+            github.com/yourusername
+        </a>
+    </p>
+
+    <p>
+        LinkedIn:
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+            linkedin.com/in/yourprofile
+        </a>
+    </p>
+</section>
+
+<footer>
+    © 2026 Allbert Zhang | Network Engineering Portfolio
+</footer>
+
+</body>
+</html>
